@@ -1,0 +1,6 @@
+{
+    "port": "5000",
+    "secretKey": "secretKey",
+    "solt": "8",
+    "paseURL": "http://localhost:5000"
+}
