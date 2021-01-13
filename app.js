@@ -16,7 +16,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 
 const app = express()
-const PORT = config.get('port') || 5000
+const PORT = process.env.PORT || 80
 
 if(process.env.NODE_ENV === 'production') {
     app.use('/', express.static(path.join(__dirname, 'frontend', 'build')))
