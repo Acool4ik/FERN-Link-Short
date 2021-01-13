@@ -21,11 +21,14 @@ const PORT = process.env.PORT || 80
 
 app.use('/', express.static(path.join(__dirname, 'frontend', 'build')))
 
+app.get('/*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+})
 
 
 app.use(express.urlencoded({ extended: false })) // for parse body and json
 app.use(express.json())
-
 
 app.use('/', require('./routes/api.routes'))
 
@@ -35,14 +38,4 @@ app.use('/', require('./routes/linkitem.routes'))
 app.use('/', require('./routes/linkitem.image.routes'))
 
 
-app.get('/*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-})
-
-
-app.listen(PORT, start)
-
-function start() {  // initial func at time starting server
-    console.log(`Example app listening at http://localhost:${PORT}`)
-}
+app.listen(PORT)
