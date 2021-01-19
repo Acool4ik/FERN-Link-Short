@@ -1,0 +1,238 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.floating-top-right {
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  top: 23px;
+  right: 23px;
+  animation: flipCloud 16s infinite linear;
+}
+
+.float-btns-item {
+  opacity: 0;
+  transform: scale(0.4) translateY(0px) translateX(40px);
+}
+
+.floating-nav-exact {
+  position: absolute;
+  top: -24px;
+  animation: rotateArray 1.5s infinite linear;
+
+}
+
+.logo {
+  position: fixed;
+  top: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo > h5 {
+  line-height: 130% !important;
+  font-size: 1.79rem;
+}
+
+.fs-castom-generator {
+  font-size: calc(10px + 1vmin); 
+}
+
+.disant-effect {
+  position: relative;
+  animation: disant 5s linear;
+}
+
+@keyframes disant {
+  from {
+    margin-top: 0;
+  } to {
+    margin-top: 120vh;
+  }
+}
+
+@keyframes flipCloud {
+  0% {
+    right: 23px;
+  }
+  
+  50% {
+    right: calc(100% - 69px);
+  }
+
+  100% {
+    right: 23px;
+  }
+}
+
+@keyframes rotateArray {
+  from {
+    transform: translateX(20%) rotate3d(0, 1, 0, 0deg);
+  }
+
+  to {
+    transform: translateX(20%) rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.margin-container-bottom {
+  padding-top: 0.75rem;
+  margin-bottom: calc(56px + 23px + 30px);
+}
+
+.link-item {
+  margin-bottom: 0.7rem;
+ 
+}
+
+.link-item:hover {
+  z-index: 10000;
+  box-shadow: 0 8px 20px 0 rgba(0,0,0,0.35), 0 6px 23px 0 rgba(0,0,0,0.3);
+  transform: scale(1.02);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detail-margin {
+  margin-top: 1.8vh;
+  margin-bottom: 1.8vh;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hidden {
+  position: relative;
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size: 0px !important;
+  z-index: -10;
+  opacity: 0;
+}
+
+.detail-scroll {
+  word-break: 'break-word';
+  overflow-y: auto;
+  margin-bottom: calc(56px);
+  margin-top: calc(56px + 40px);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.floating-bottom-left {
+  position: fixed;
+  bottom: 23px;
+  left: 23px;
+}
+
+.troll-icon {
+  display: block;
+  width: 58px;
+  height: 58px;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 9px;
+  border: 1px solid white;
+}
+
+.show-icon {
+  display: block;
+  width: 58px;
+  height: 58px;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 9px;
+  border: 1px solid white;
+}
+
+.hidden-icon {
+  display: none;
+}
+
+.p0 {
+  padding: 0 !important;
+}
+
+.icon-linkitem {
+  display: block;
+  height: 65px;
+  width: 65px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-position: center center;
+  background-size: cover;
+
+}
+
+
+
+
+
