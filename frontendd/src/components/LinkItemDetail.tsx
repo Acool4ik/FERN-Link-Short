@@ -9,7 +9,7 @@ import { AuthContext } from '../context/auth/AuthContext'
 
 // castom components
 import { FloatBtns } from './FloatBtns'
-import { Loader } from '../components/Loader'
+import { Loader } from './Loader'
 
 // castom hooks
 import { useMessage, EMessageColor } from '../hooks/useMessage'
