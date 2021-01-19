@@ -2,7 +2,6 @@ const express = require('express')
 const config = require('config')
 const firebase = require('firebase/app')
 const path = require('path')
-const favicon = require('express-favicon');
 
 const PORT = process.env.PORT || 80
 
@@ -18,14 +17,10 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
+
 const app = express()
-app.use(favicon(__dirname + 'frontend/public/favicon.ico')); 
+
 app.use(express.static(path.join(__dirname, 'frontend', 'build')))
-
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
-})
 
 
 app.use(express.urlencoded({ extended: false })) // for parse body and json
